@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/css/styles.css">
   <title>Frontend Mentor | Interactive comments section</title>
 
@@ -16,7 +20,97 @@
   </style>
  -->
 </head>
-<body>
+<body class="bg-Very-light-gray font-Rubik">
+  <section class="w-[90%] mx-auto  max-w-3xl py-12 grid gap-5">
+    <!-- commnet user card  -->
+    <div class="card-comment" id="cardComment">
+      <!-- card content -->
+      <div class=" space-y-4">
+        <div class="flex justify-between">
+          <!-- user data -->
+          <div class="flex items-center justify-start gap-4">
+            <img src="./src/images/avatars/image-amyrobson.png" alt="amyrobson" class="max-w-10" data-id="">
+            <h5 class="font-bold text-Dark-blue">amyrobson <span class="font-normal text-Grayish-Blue  ml-4">1 month ago</span></h5>
+          </div>
+  
+          <button class="hidden md:flex items-center justify-center gap-2 text-Moderate-blue font-medium text-lg" id="btnReply">
+            <img src="./src/images/icon-reply.svg" alt="icon-reply" class="w-4 h-4">
+            Reply
+          </button>
+        </div>
+
+        <!-- user comment -->
+        <p class="text-Grayish-Blue text-lg">
+          Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
+        </p>
+      </div>
+      
+      <!-- comment options -->
+      <div class="flex justify-between items-center">
+        <!-- score controller -->
+        <div class="bg-Very-light-gray flex items-center justify-center px-4 py-2 gap-3 md:gap-5 md:px-3 md:py-4 rounded-xl md:flex-col">
+          <button>
+            <img src="./src/images/icon-plus.svg" alt="btn-plus" class="w-4">
+          </button>
+          <span class="text-Moderate-blue font-semibold">12</span>
+          <button>
+            <img src="./src/images/icon-minus.svg" alt="btn-minus" class="w-4">
+          </button>
+        </div>
+
+        <button class="flex md:hidden items-center justify-center gap-2 text-Moderate-blue font-medium text-lg">
+          <img src="./src/images/icon-reply.svg" alt="icon-reply" class="w-4 h-4" id="btnReply">
+          Reply
+        </button>
+      </div>
+    </div>
+
+    <!-- response user card -->
+    <div class="w-full relative">
+      <div class="bg-white w-[95%] ml-auto flex flex-col md:items-start md:space-y-0 md:flex-row-reverse md:gap-4 lg:gap-8 px-4 py-5 space-y-4 md:px-6 md:py-6 before:absolute  before:top-0 before:left-0 before:h-full before:w-[2%] before:bg-Very-light-gray before:shadow-2xl " id="" data-id="">
+        <!-- card content -->
+        <div class=" space-y-4">
+          <div class="flex justify-between">
+            <!-- user data -->
+            <div class="flex items-center justify-start gap-4">
+              <img src="./src/images/avatars/image-ramsesmiron.png" alt="amyrobson" class="max-w-10" data-id="">
+              <h5 class="font-bold text-Dark-blue">amyrobson <span class="font-normal text-Grayish-Blue  ml-4">1 month ago</span></h5>
+            </div>
+    
+            <button class="hidden md:flex items-center justify-center gap-2 text-Moderate-blue font-medium text-lg" id="btnReply">
+              <img src="./src/images/icon-reply.svg" alt="icon-reply" class="w-4 h-4">
+              Reply
+            </button>
+          </div>
+  
+          <!-- user comment -->
+          <p class="text-Grayish-Blue text-lg">
+            Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
+          </p>
+        </div>
+        
+        <!-- comment options -->
+        <div class="flex justify-between items-center">
+          <!-- score controller -->
+          <div class="bg-Very-light-gray flex items-center justify-center px-4 py-2 gap-3 md:gap-5 md:px-3 md:py-4 rounded-xl md:flex-col">
+            <button>
+              <img src="./src/images/icon-plus.svg" alt="btn-plus" class="w-4">
+            </button>
+            <span class="text-Moderate-blue font-semibold">12</span>
+            <button>
+              <img src="./src/images/icon-minus.svg" alt="btn-minus" class="w-4">
+            </button>
+          </div>
+  
+          <button class="flex md:hidden items-center justify-center gap-2 text-Moderate-blue font-medium text-lg">
+            <img src="./src/images/icon-reply.svg" alt="icon-reply" class="w-4 h-4" id="btnReply">
+            Reply
+          </button>
+        </div>
+      </div>
+    </div>
+    
+  </section>
 
   <!-- Pull dynamic content from the data.json file -->
 <!--   
